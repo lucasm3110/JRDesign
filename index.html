@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="/images/room1.jpg" as="image">
+    <link rel="preload" href="/images/room2.jpg" as="image">
 </head>
 
 <body>
@@ -22,42 +24,43 @@
                     <button onclick="scrollToSection('section3')" class="button">Our Projects</button>
                     <button onclick="scrollToSection('section4')" class="button">About Us</button>
                     <button onclick="scrollToSection('section5')" class="button">Contact</button>
+
+                    <div class="hamburger-menu">
+                        <input type="checkbox" id="menu-toggle">
+                        <label for="menu-toggle" class="menu-button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                        <div class="menu">
+                            <ul>
+                                <li><a href="#section1">Home</a></li>
+                                <li><a href="#section2">About</a></li>
+                                <li><a href="#section3">Services</a></li>
+                                <li><a href="#section4">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="slideshow-container">
-                <div class="slide">
-                    <img src="/images/cabinetImages/1.png" alt="Slide 1">
-                    <div class="text">BOOK YOUR <span class="important">FREE</span> CONSULTATION
-                        <a href="book.html" class="buttonSlide">➞</a>
-                    </div>
-
-                </div>
-
-                <div class="slide">
-                    <img src="/images/cabinetImages/2.png" alt="Slide 2">
-                    <div class="text">BOOK YOUR <span class="important">FREE</span> CONSULTATION
-                        <a href="book.html" class="buttonSlide">➞</a>
+            <div class="homeImageDesktop">
+                <div class="container">
+                    <img <img src="/images/room1.jpg" loading="lazy" alt="Slide 1" class="image">
+                    <div class="text">
+                        <div class="text">BOOK YOUR <span class="important">FREE</span> CONSULTATION
+                            <br> <a href="book.html" class="buttonImg">BOOK NOW </a>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="slide">
-                    <img src="/images/cabinetImages/3.png" alt="Slide 3">
-                    <div class="text">BOOK YOUR <span class="important">FREE</span> CONSULTATION
-                        <a href="book.html" class="buttonSlide">➞</a>
-                    </div>
-                </div>
-
-                <div class="slide">
-                    <img src="/images/cabinetImages/4.png" alt="Slide 4">
-                    <div class="text">BOOK YOUR <span class="important">FREE</span> CONSULTATION
-                        <a href="book.html" class="buttonSlide">➞</a>
-                    </div>
-                </div>
-
-                <div class="slide">
-                    <img src="/images/cabinetImages/5.png" alt="Slide 5">
-                    <div class="text">BOOK YOUR <span class="important">FREE</span> CONSULTATION
-                        <a href="book.html" class="buttonSlide">➞</a>
+            <div class="homeImageMobile">
+                <div class="container">
+                    <img <img src="/images/room2.jpg" loading="lazy" alt="Slide 1" class="image">
+                    <div class="text">
+                        <div class="text">BOOK YOUR <span class="important">FREE</span> CONSULTATION
+                            <br> <a href="book.html" class="buttonImg">BOOK NOW </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -69,7 +72,7 @@
         <h2>Our Services</h2>
         <div class="service-container">
             <div class="serviceItem">
-                <img src="/images/kitchen.png" alt="image">
+                <img src="/images/kitchen.png" loading="lazy" alt="image">
             </div>
             <div class="serviceItem">
                 <h3 class="servicesTitle">Kitchen</h3>
@@ -91,13 +94,13 @@
                     id!</p>
             </div>
             <div class="serviceItem">
-                <img src="/images/kitchen.png" alt="image">
+                <img src="/images/kitchen.png" loading="lazy" alt="image">
             </div>
         </div>
 
         <div class="service-container">
             <div class="serviceItem">
-                <img src="/images/kitchen.png" alt="image">
+                <img src="/images/kitchen.png" loading="lazy" alt="image">
             </div>
             <div class="serviceItem">
                 <h3 class="servicesTitle">Kitchen</h3>

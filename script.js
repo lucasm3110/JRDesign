@@ -6,23 +6,6 @@ function scrollToSection(sectionId) {
 }
 
 
-// Image Slide Show
-var slides = document.getElementsByClassName("slide");
-var slideIndex = 0;
-
-function showSlide() {
-    for (var i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlide, 5000); // Change slide every 2 seconds
-}
-
-showSlide();
 
 
 //open web page
@@ -32,5 +15,34 @@ function openPage(element) {
         window.open(link);
     }
 }
+
+//hamburger menu
+const closeButton = document.createElement('div');
+closeButton.innerHTML = '&#10005;';
+closeButton.classList.add('close-button');
+document.querySelector('.menu').appendChild(closeButton);
+
+closeButton.addEventListener('click', function () {
+    document.getElementById('menu-toggle').checked = false;
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('toggleButton');
+    const hamburgerMenu = document.querySelector('.menu');
+    const menuLinks = document.querySelectorAll('.menu a');
+
+    menuLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            if (hamburgerMenu.contains(event.target)) {
+                document.getElementById('menu-toggle').checked = false;
+            }
+        });
+    });
+});
+
+
+
 
 

@@ -19,6 +19,7 @@ body {
     overflow-y: scroll;
     scroll-behavior: smooth;
     margin-top: 10px;
+    width: 100%;
 }
 
 .header {
@@ -62,6 +63,27 @@ body {
     letter-spacing: 1px;
 }
 
+.buttonImg {
+    margin: 5px 10px 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #F1EFE7;
+    color: #F1EFE7;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: border-color 0.3s ease;
+    width: 153px;
+    height: 42px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.buttonImg:hover {
+    background-color: #F1EFE7;
+    color: black;
+}
+
 .button:hover {
     background-color: black;
     color: #F1EFE7;
@@ -88,9 +110,6 @@ body {
     margin-bottom: 30px;
 }
 
-.home {
-    height: auto;
-}
 
 .homeContent {
     display: flex;
@@ -101,41 +120,10 @@ body {
     flex-basis: 100%;
 }
 
-.slideshow-container {
-    position: relative;
-    width: 100%;
-    /* Adjust this width as per your requirement */
-    margin: 0 auto;
-}
-
-.slide {
-    display: none;
-}
-
-.slide img {
-    width: 100%;
+.home {
     height: auto;
 }
 
-.slide .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #F1EFE7;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: 300;
-    font-size: 25px;
-}
-
-.slide .text .important {
-    font-weight: 500;
-}
 
 .buttonSlide {
     margin: 5px 10px 5px;
@@ -193,8 +181,153 @@ hr {
     min-width: 250;
 }
 
+.hamburger-menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-/* hide header buttons when its NOT ON DESKTOP */
+.menu-button {
+    display: block;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+.menu-button span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: background 0.2s ease-out;
+}
+
+.menu-button span:nth-child(1) {
+    top: 10%;
+}
+
+.menu-button span:nth-child(3) {
+    top: 90%;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    z-index: 999;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.menu ul li {
+    margin-bottom: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    transition: color 0.2s ease-out;
+}
+
+.menu ul li a:hover {
+    color: #888;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked~.menu {
+    transform: translateX(0%);
+}
+
+#menu-toggle:checked~.menu-button span {
+    background: transparent;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.hidden {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.homeImageDesktop {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.homeImageMobile {
+    position: relative;
+    max-width: 0;
+    overflow: hidden;
+}
+
+.image {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.text {
+    position: absolute;
+    font-family: 'Noto Sans', sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #F1EFE7;
+    font-weight: 300;
+    font-size: 35px;
+    padding: 30px 100px;
+}
+
+.text .important {
+    font-weight: 500;
+}
+
+
+/* NOT ON DESKTOP */
 @media (max-width: 825px) {
     .button {
         display: none;
@@ -204,28 +337,45 @@ hr {
         width: 100%;
         /* Adjust the width as needed */
     }
+
+    .hamburger-menu {
+        height: 50px;
+    }
+
+    .menu-button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
 }
+
 
 @media (max-width: 620px) {
 
-    .slideshow-container {
-        position: relative;
-        width: 100%;
-        /* Adjust this width as per your requirement */
-        margin: 0 auto;
-    }
-
-    .slide .text {
-        font-size: 15px;
-    }
-
-    .slide img {
-        width: 100%;
-        height: auto;
-    }
 
     .buttonSlide {
         font-size: 10px;
+    }
+
+    .homeImageDesktop {
+        width: 0;
+    }
+
+    .homeImageMobile {
+        max-width: 100%;
+    }
+
+    .image {
+        display: block;
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+
+        text-align: center;
     }
 }
 
@@ -241,9 +391,9 @@ hr {
         font-size: 20px;
     }
 
-
     .serviceItem img {
         margin-bottom: 30px;
     }
+
 
 }
