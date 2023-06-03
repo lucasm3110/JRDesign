@@ -25,5 +25,12 @@ function showSlide() {
 showSlide();
 
 
+//open web page
+function openPage(element) {
+    var link = element.getAttribute('data-link');
+    if (link) {
+        window.open(link);
+    }
+}
 
 
