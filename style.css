@@ -397,6 +397,53 @@ hr {
     transform: scale(1.1);
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+input,
+select {
+    width: 40%;
+    margin-top: 10px;
+    height: 40px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 15px;
+    background-color: #F1EFE7;
+    border: 1.5px solid rgba(0, 0, 0, 0.332);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.thankYou {
+    width: 100%;
+    height: 60vh;
+    text-align: center;
+}
+
+.thankYou h1 {
+    margin-top: 50px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.thankYou h2 {
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin: 0px 20px;
+}
+
 
 /* NOT ON DESKTOP */
 @media (max-width: 825px) {
@@ -445,10 +492,13 @@ hr {
 
 
 @media (max-width: 620px) {
-
-
     .buttonSlide {
         font-size: 10px;
+    }
+
+    input,
+    select {
+        width: 90%;
     }
 
 }

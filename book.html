@@ -30,6 +30,48 @@
         </div>
 
 
+        <form action="https://formsubmit.co/lucustomguitars@gmail.com" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" name="name" placeholder="Full Name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="your@email.com" required><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" name="phone" required><br><br>
+
+            <label for="address">Address:</label>
+            <input type="text" name="address" required><br><br>
+
+            <label for="type-of-project">Type of Project</label>
+            <input type="text" name="type" placeholder="e.g Kitchen, Bathroom, Bedroom" required><br><br>
+
+            <label for="budget">Estimated Budget:</label>
+            <select name="budget" required>
+                <option value="">Select estimated budget</option>
+                <option value="0-5">$0 - $5,000</option>
+                <option value="5-10">$5000 - $10,000</option>
+                <option value="10-20">$10,000 - $20,000</option>
+                <option value="20-30">$20,000 - $30,000</option>
+                <option value="30-40">$30,000 - $40,000</option>
+                <option value="40-50">$40,000 - $50,000</option>
+                <option value="50-60">$50,000 - $60,000</option>
+                <option value="60-70">$60,000 - $70,000</option>
+                <option value="70-80">$70,000 - $80,000</option>
+                <option value="80-90">$80,000 - $90,000</option>
+                <option value="over-100">Over $100,000</option>
+                <option value="not-sure">Still Not Sure</option>
+            </select><br><br>
+            <button type="submit" class="buttonMid">Send</button>
+
+            <input type="hidden" name="_next" value="thankYou.html">
+            <input type="hidden" name="_subject" value="New submission!">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+        </form>
+
+
+
         <footer class="footer">
             <div class="logo-container">
                 <img src="/images/logoFooter.svg" alt="Logo" class="logo-image">
